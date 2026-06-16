@@ -1,0 +1,12 @@
+/* ============================
+   Cairo Font - Google Fonts
+   خط Cairo العربي الحديث
+============================ */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Apply Cairo globally */
+body,
+html,
+* {
+  font-family: 'Cairo', 'DINNextLTArabic', sans-serif !important;
+}

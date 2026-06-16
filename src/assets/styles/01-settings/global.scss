@@ -5,25 +5,50 @@ $infinte-color: var(--infinte-color);
 $main-text-color: var(--main-text-color);
 
 :root {
-  --infinte-color: #c9c9c9;
-  --main-text-color: #231f1e;
-  --main-text-color-dark: #2b2d34;
+  --infinte-color: #a5b4fc;
+  --main-text-color: #1e1b4b;
+  --main-text-color-dark: #0f0e2a;
 
-  /* current */
-  --color-primary: #5cd5c4;
-  --color-primary: #414042;
-  --color-primary-d: #272628;
-  --color-primary-l: #676668;
-  --color-primary-reverse: #ff6767;
-  --color-text: #7c8082;
-  --bg-gray: #c6c7ce1a;
-  --color-grey: #f5f7f9;
-  --color-light-grey: #eeeeee;
+  /* ===== خدماتي - Premium Color Palette ===== */
+  --color-primary: #6366f1;
+  --color-primary-d: #4f46e5;
+  --color-primary-l: #a5b4fc;
+  --color-primary-reverse: #ffffff;
+  --color-secondary: #8b5cf6;
+  --color-accent: #06b6d4;
+  --color-success: #10b981;
+
+  --color-text: #64748b;
+  --bg-gray: #f1f5f9;
+  --color-grey: #f8fafc;
+  --color-light-grey: #e2e8f0;
+
+  /* Gradient */
+  --gradient-main: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+  --gradient-card: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(139,92,246,0.04));
+  --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+
+  /* Shadows */
+  --shadow-glow: 0 0 30px rgba(99,102,241,0.25);
+  --shadow-card: 0 4px 24px rgba(99,102,241,0.12);
+  --shadow-hover: 0 12px 40px rgba(99,102,241,0.25);
+
+  /* Borders */
+  --border-color: rgba(99,102,241,0.15);
+  --border-hover: rgba(99,102,241,0.45);
+
   /* font-size */
   --font-sm: 0.8685714286rem;
-  /* font-family: ; */
-  --font-main: "DINNextLTArabic";
+
+  /* Font - Cairo for Arabic */
+  --font-main: "Cairo", "DINNextLTArabic", sans-serif;
+
+  /* Radius */
+  --radius-card: 16px;
+  --radius-btn: 50px;
+  --radius-icon: 12px;
 
   /* plugins */
   --mm-ocd-width: calc(100% - 51px);
 }
+
