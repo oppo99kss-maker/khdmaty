@@ -104,15 +104,10 @@
     <a href="https://www.enable-javascript.com/" rel="noreferrer"
        target="_blank">To enable JavaScript on webpage</a>.
 </noscript>
-<div class="app-inner flex flex-col min-h-full relative overflow-hidden">
-    <!-- توهجات الخلفية الفاخرة -->
-    <div class="premium-bg-glow" style="top: 10%; right: -150px;"></div>
-    <div class="premium-bg-glow" style="top: 50%; left: -150px; animation-delay: -5s; background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 100%);"></div>
-    <div class="premium-bg-glow" style="top: 80%; right: -100px; animation-delay: -3s;"></div>
-
+<div class="app-inner flex flex-col min-h-full">
     {% hook 'body:start' %}
     {% component 'header.header' %}
-    <main id="main-content" role="main" class="relative z-10">
+    <main id="main-content" role="main">
     {% block content %}{% endblock %}
     </main>
     {% component 'footer.footer' %}

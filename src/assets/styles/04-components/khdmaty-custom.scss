@@ -1,7 +1,7 @@
 /*
  * ================================================================
- *  خدماتي - Khdmaty Ultra Premium Theme Customizations
- *  تصميم فاخر، متطور وديناميكي للخدمات الإلكترونية
+ *  خدماتي - Khdmaty Luxury Fashion & Clothing Theme Customizations
+ *  تصميم ناصع، راقٍ وبسيط لعلامة تجارية متخصصة في الملابس والأزياء
  * ================================================================
  */
 
@@ -12,68 +12,44 @@
 
 body {
   font-family: 'Cairo', sans-serif !important;
-  background-color: #0b0f19 !important; /* خلفية داكنة فخمة للموقع */
-  color: #f8fafc !important;
+  background-color: #fafaf9 !important; /* خلفية بيضاء دافئة وناعمة مناسبة لعرض الأزياء */
+  color: #1c1917 !important; /* نصوص بلون كربوني داكن وأنيق */
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* تخصيص شريط التمرير لإعطاء مظهر متناسق واحترافي */
+/* شريط التمرير بلون كربوني وذهبي فاخر */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #f5f5f4;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #6366f1, #8b5cf6);
-  border-radius: 5px;
+  background: #1c1917;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #8b5cf6, #06b6d4);
+  background: #c5a880;
 }
 
-/* تخصيص تحديد النصوص */
+/* تخصيص التحديد بلون ذهبي هادئ */
 ::selection {
-  background: rgba(99, 102, 241, 0.35);
-  color: #ffffff;
-}
-
-/* ==============================
-   DECORATIVE FLOATING BLOBS (خلفيات مضيئة متحركة)
-   ============================== */
-.premium-bg-glow {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.05) 50%, transparent 100%);
-  filter: blur(80px);
-  z-index: 0;
-  pointer-events: none;
-  animation: float-glow 10s ease-in-out infinite alternate;
-}
-
-@keyframes float-glow {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  100% {
-    transform: translate(30px, 50px) scale(1.2);
-  }
+  background: rgba(197, 168, 128, 0.25);
+  color: #1c1917;
 }
 
 /* ==============================
    TOP NAVBAR (شريط الإعلانات العلوي)
    ============================= */
 .top-navbar {
-  background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 50%, #0891b2 100%) !important;
-  color: white !important;
-  font-size: 0.85rem !important;
+  background: #1c1917 !important; /* كربوني داكن كلاسيكي للمظهر الفاخر */
+  color: #ffffff !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.5px;
   padding: 8px 0 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.25) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
   position: relative;
   z-index: 50;
 }
@@ -81,343 +57,313 @@ body {
 .top-navbar a, 
 .top-navbar span, 
 .topnav-link-item {
-  color: rgba(255, 255, 255, 0.95) !important;
-  font-weight: 700 !important;
-  transition: all 0.3s ease !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 600 !important;
+  transition: color 0.3s ease !important;
 }
 
 .top-navbar a:hover {
-  color: #06b6d4 !important;
-  transform: translateY(-1px);
+  color: #c5a880 !important; /* لمسة ذهبية للملابس الراقية */
 }
 
 /* ==============================
    MAIN NAVBAR (شريط التنقل الرئيسي الفاخر)
    ============================== */
 .main-nav-container {
-  background: rgba(15, 23, 42, 0.8) !important; /* زجاجي شفاف داكن */
-  backdrop-filter: blur(25px) !important;
-  -webkit-backdrop-filter: blur(25px) !important;
-  border-bottom: 1px solid rgba(99, 102, 241, 0.15) !important;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  padding: 12px 0 !important;
+  background: rgba(255, 255, 255, 0.85) !important; /* زجاجي شفاف أبيض ناصع */
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(28, 25, 23, 0.05) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  padding: 14px 0 !important;
 }
 
 .main-nav-container.fixed-pinned .inner,
 .main-nav-container.fixed-header .inner {
-  background: rgba(15, 23, 42, 0.9) !important;
-  border-bottom: 1px solid rgba(99, 102, 241, 0.25) !important;
-  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(28, 25, 23, 0.08) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05) !important;
 }
 
-/* اسم المتجر وشعاره بشكل متوهج */
+/* اسم المتجر وشعاره بشكل كلاسيكي أنيق */
 .navbar-brand h1, 
 .navbar-brand h4 {
-  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 50%, #6366f1 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  font-weight: 900 !important;
-  font-size: 1.6rem !important;
+  color: #1c1917 !important;
+  font-weight: 800 !important;
+  font-size: 1.5rem !important;
   letter-spacing: -0.5px;
-  text-shadow: 0 2px 10px rgba(99, 102, 241, 0.3) !important;
 }
 
-/* أزرار القائمة الرئيسية */
+/* أزرار القائمة الرئيسية للملابس */
 .main-menu > li > a {
   font-weight: 700 !important;
-  font-size: 0.95rem !important;
-  color: #cbd5e1 !important;
-  border-radius: 12px !important;
-  padding: 10px 20px !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  font-size: 0.92rem !important;
+  color: #44403c !important;
+  border-radius: 6px !important;
+  padding: 8px 16px !important;
+  transition: all 0.3s ease !important;
   position: relative !important;
 }
 
 .main-menu > li > a:hover,
 .main-menu > li.is-active > a {
-  color: #ffffff !important;
-  background: rgba(99, 102, 241, 0.15) !important;
-  box-shadow: inset 0 0 12px rgba(99, 102, 241, 0.2) !important;
-  border: 1px solid rgba(99, 102, 241, 0.3) !important;
+  color: #1c1917 !important;
+  background: rgba(197, 168, 128, 0.1) !important;
 }
 
 /* زر السلة والأيقونات العلوية */
 .header-btn__icon {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
-  color: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4) !important;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  background: #1c1917 !important; /* كلاسيكي أسود */
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(28, 25, 23, 0.15) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   border-radius: 50% !important;
-  width: 44px !important;
-  height: 44px !important;
+  width: 42px !important;
+  height: 42px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
 }
 
 .header-btn__icon:hover {
-  transform: translateY(-4px) scale(1.08) !important;
-  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.6) !important;
-  background: linear-gradient(135deg, #8b5cf6, #06b6d4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(197, 168, 128, 0.4) !important;
+  background: #c5a880 !important; /* تلميح ذهبي رملي عند التمرير */
 }
 
 /* مربع البحث */
 .s-search-input {
-  border-radius: 14px !important;
-  border: 1.5px solid rgba(99, 102, 241, 0.3) !important;
-  background: rgba(15, 23, 42, 0.6) !important;
-  color: white !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(28, 25, 23, 0.15) !important;
+  background: #ffffff !important;
+  color: #1c1917 !important;
   font-family: 'Cairo', sans-serif !important;
   font-weight: 600 !important;
   transition: all 0.3s ease !important;
 }
 
 .s-search-input:focus {
-  border-color: #06b6d4 !important;
-  box-shadow: 0 0 20px rgba(6, 182, 212, 0.25) !important;
-  background: rgba(15, 23, 42, 0.8) !important;
+  border-color: #c5a880 !important;
+  box-shadow: 0 0 10px rgba(197, 168, 128, 0.15) !important;
 }
 
 /* ==============================
-   HERO SLIDER OVERHAUL (الواجهة الترحيبية المميزة)
+   HERO SLIDER OVERHAUL (لوحة عرض أزياء مميزة)
    ============================== */
 .s-block--hero-slider {
   margin-bottom: 3rem !important;
-  border-radius: 24px !important;
+  border-radius: 16px !important;
   overflow: hidden !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(28, 25, 23, 0.05) !important;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05) !important;
 }
 
 .s-block--hero-slider .swiper-slide {
-  min-height: 600px !important;
+  min-height: 580px !important;
   display: flex !important;
   align-items: center !important;
   position: relative !important;
 }
 
+/* تعتيم خفيف وناعم أبيض بدلاً من الأسود للسلايدر */
 .s-block--hero-slider .swiper-slide::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(11, 15, 25, 0.95) 0%, rgba(15, 23, 42, 0.8) 50%, rgba(11, 15, 25, 0.6) 100%) !important;
+  background: linear-gradient(90deg, rgba(250, 250, 249, 0.9) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(250, 250, 249, 0.2) 100%) !important;
   z-index: 2;
 }
 
 .home-slider__content {
   position: relative;
   z-index: 10 !important;
-  text-align: right !important; /* محاذاة النص لليمين بما يتوافق مع اللغة العربية */
+  text-align: right !important;
 }
 
-/* بطاقة المحتوى الزجاجية داخل السلايدر */
+/* بطاقة عرض الأزياء الكلاسيكية الناعمة */
 .slider-content-card {
-  background: rgba(15, 23, 42, 0.65) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(197, 168, 128, 0.2) !important;
   padding: 3rem !important;
-  border-radius: 24px !important;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3) !important;
-  max-width: 650px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03) !important;
+  max-width: 600px !important;
 }
 
 .home-slider__content h2 {
   font-family: 'Cairo', sans-serif !important;
-  font-weight: 900 !important;
-  font-size: clamp(2rem, 5vw, 3.5rem) !important;
-  line-height: 1.25 !important;
-  background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 50%, #8b5cf6 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  margin-bottom: 1.5rem !important;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+  font-weight: 800 !important;
+  font-size: clamp(2rem, 4.5vw, 3.2rem) !important;
+  line-height: 1.3 !important;
+  color: #1c1917 !important;
+  margin-bottom: 1.25rem !important;
 }
 
 .home-slider__content .description {
-  font-size: 1.2rem !important;
-  color: #e2e8f0 !important;
+  font-size: 1.15rem !important;
+  color: #57534e !important;
   font-weight: 500 !important;
-  line-height: 1.8 !important;
-  margin-bottom: 2.25rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: 2rem !important;
 }
 
-/* أسهم السلايدر الزجاجية المضيئة */
+/* أسهم السلايدر للموضة */
 .swiper-button-next,
 .swiper-button-prev {
-  background: rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(28, 25, 23, 0.1) !important;
   border-radius: 50% !important;
-  width: 52px !important;
-  height: 52px !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  color: white !important;
+  width: 48px !important;
+  height: 48px !important;
+  transition: all 0.3s ease !important;
+  color: #1c1917 !important;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
-  box-shadow: 0 0 25px rgba(99, 102, 241, 0.5) !important;
-  border-color: transparent !important;
-  transform: scale(1.1) !important;
+  background: #1c1917 !important;
+  color: #ffffff !important;
+  transform: scale(1.05) !important;
 }
 
 .swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.3) !important;
-  width: 10px !important;
-  height: 10px !important;
+  background: rgba(28, 25, 23, 0.2) !important;
+  width: 8px !important;
+  height: 8px !important;
   transition: all 0.3s ease !important;
-  opacity: 1 !important;
 }
 
 .swiper-pagination-bullet-active {
-  background: #6366f1 !important;
-  width: 30px !important;
-  border-radius: 5px !important;
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.8) !important;
+  background: #1c1917 !important;
+  width: 24px !important;
+  border-radius: 4px !important;
 }
 
 /* ==============================
-   PRODUCT CARDS OVERHAUL (كرت المنتج الفاخر)
+   PRODUCT CARDS OVERHAUL (كرت منتجات الملابس الفاخرة)
    ============================== */
 .s-product-card,
 salla-product-card,
 .product-card {
-  background: rgba(30, 41, 59, 0.45) !important; /* لون كرت معتم فاخر */
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  border-radius: 20px !important;
+  background: #ffffff !important; /* كروت بيضاء نقية */
+  border-radius: 12px !important;
   overflow: hidden !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
-  padding: 12px !important;
+  border: 1px solid rgba(28, 25, 23, 0.05) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  padding: 10px !important;
 }
 
 .s-product-card:hover,
 salla-product-card:hover,
 .product-card:hover {
-  transform: translateY(-10px) !important;
-  border-color: rgba(99, 102, 241, 0.4) !important;
-  box-shadow: 0 25px 60px rgba(99, 102, 241, 0.25) !important;
+  transform: translateY(-6px) !important;
+  border-color: rgba(197, 168, 128, 0.25) !important;
+  box-shadow: 0 16px 35px rgba(28, 25, 23, 0.06) !important;
 }
 
-/* تكبير وتنعيم صورة المنتج عند التمرير */
+/* صورة ملابس ناعمة مع تقريب لطيف */
 .s-product-card__image-wrapper, 
 .product-card img {
-  border-radius: 14px !important;
+  border-radius: 8px !important;
   overflow: hidden;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
 .s-product-card:hover .s-product-card__image-wrapper,
 .product-card:hover img {
-  transform: scale(1.06) !important;
+  transform: scale(1.04) !important;
 }
 
-/* عنوان المنتج */
+/* عنوان قطعة الملابس */
 .s-product-card__title,
 .s-product-card h3 {
   font-family: 'Cairo', sans-serif !important;
   font-weight: 700 !important;
-  color: #f1f5f9 !important;
-  font-size: 1.05rem !important;
-  margin-top: 15px !important;
-  transition: color 0.3s ease !important;
+  color: #1c1917 !important;
+  font-size: 0.98rem !important;
+  margin-top: 12px !important;
+  letter-spacing: -0.2px;
 }
 
-.s-product-card:hover .s-product-card__title {
-  color: #a5b4fc !important;
-}
-
-/* سعر المنتج مع توهج احترافي */
+/* سعر كلاسيكي */
 .s-price,
 .s-product-card .s-price {
-  color: #38bdf8 !important; /* لون لبني مضيء */
+  color: #1c1917 !important;
   font-weight: 800 !important;
-  font-size: 1.25rem !important;
-  text-shadow: 0 0 15px rgba(56, 189, 248, 0.3) !important;
+  font-size: 1.15rem !important;
 }
 
-/* زر إضافة للسلة الاحترافي - مع حركة Shimmer */
+/* زر "إضافة للسلة" ناعم وبلون كربوني */
 .s-product-card .btn,
 .btn--add-to-cart,
 .s-product-card__add-to-cart {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%) !important;
-  background-size: 200% auto !important;
-  color: white !important;
+  background: #1c1917 !important; /* أسود صلب أنيق */
+  color: #ffffff !important;
   border: none !important;
-  border-radius: 12px !important;
+  border-radius: 6px !important;
   font-family: 'Cairo', sans-serif !important;
-  font-weight: 800 !important;
-  padding: 12px 20px !important;
+  font-weight: 700 !important;
+  padding: 10px 18px !important;
   width: 100% !important;
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35) !important;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  transition: all 0.3s ease !important;
   text-align: center !important;
+  box-shadow: none !important;
 }
 
 .s-product-card .btn:hover,
 .btn--add-to-cart:hover {
-  background-position: right center !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.65) !important;
+  background: #c5a880 !important; /* يتحول إلى لون ذهبي ناعم */
+  color: #1c1917 !important;
+  transform: translateY(-1px) !important;
 }
 
-/* شارات الخصومات والعروض المضيئة */
+/* شارات الخصومات بلون كرزي فاخر */
 .s-badge,
 .sale-tag,
 [class*="badge"] {
-  background: linear-gradient(135deg, #ef4444, #f43f5e) !important;
+  background: #be123c !important; /* كرزي غامق راقٍ للموضة */
+  color: #ffffff !important;
   font-family: 'Cairo', sans-serif !important;
   font-weight: 800 !important;
-  border-radius: 8px !important;
-  padding: 4px 12px !important;
-  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4) !important;
+  border-radius: 4px !important;
+  padding: 3px 10px !important;
+  box-shadow: none !important;
 }
 
 /* زر المفضلة */
 .s-wishlist-btn,
 [class*="wishlist"] button {
-  background: rgba(15, 23, 42, 0.7) !important;
-  backdrop-filter: blur(8px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  color: #ef4444 !important;
-  width: 40px !important;
-  height: 40px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(28, 25, 23, 0.1) !important;
+  color: #1c1917 !important;
+  width: 38px !important;
+  height: 38px !important;
   border-radius: 50% !important;
   transition: all 0.3s ease !important;
 }
 
 .s-wishlist-btn:hover {
-  background: #ef4444 !important;
-  color: white !important;
-  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5) !important;
-  transform: scale(1.1) !important;
-}
-
-/* نجوم التقييم */
-.s-rating-stars {
-  color: #eab308 !important;
+  background: #be123c !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
 }
 
 /* ==============================
-   SECTION TITLE UPGRADE (عناوين الأقسام الفخمة)
+   SECTION TITLE UPGRADE (عناوين الأقسام الراقية)
    ============================== */
 .s-block__title h2 {
   font-family: 'Cairo', sans-serif !important;
-  font-weight: 900 !important;
-  font-size: 1.8rem !important;
-  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 1.6rem !important;
+  color: #1c1917 !important;
   position: relative !important;
   display: inline-block;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
 }
 
 .s-block__title h2::after {
@@ -425,10 +371,10 @@ salla-product-card:hover,
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #6366f1 0%, #06b6d4 100%);
-  border-radius: 2px;
+  width: 40px;
+  height: 3px;
+  background: #c5a880; /* خط ذهبي هادئ */
+  border-radius: 1px;
 }
 
 [dir="ltr"] .s-block__title h2::after {
@@ -437,173 +383,146 @@ salla-product-card:hover,
 }
 
 /* ==============================
-   STORE FEATURES OVERHAUL (مميزات المتجر)
+   STORE FEATURES OVERHAUL (مزايا متجر الملابس)
    ============================== */
 .khdmaty-feature-card {
-  background: rgba(30, 41, 59, 0.35) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(99, 102, 241, 0.1) !important;
-  border-radius: 24px !important;
-  padding: 2.5rem 2rem !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(28, 25, 23, 0.05) !important;
+  border-radius: 12px !important;
+  padding: 2.2rem 1.5rem !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   text-align: center !important;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-.khdmaty-feature-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
 .khdmaty-feature-card:hover {
-  transform: translateY(-12px) !important;
-  border-color: rgba(99, 102, 241, 0.4) !important;
-  box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2) !important;
-}
-
-.khdmaty-feature-card:hover::before {
-  opacity: 1;
+  transform: translateY(-6px) !important;
+  border-color: rgba(197, 168, 128, 0.2) !important;
+  box-shadow: 0 15px 30px rgba(28, 25, 23, 0.04) !important;
 }
 
 .khdmaty-feature-icon {
-  width: 80px !important;
-  height: 80px !important;
-  background: linear-gradient(135deg, #6366f1, #06b6d4) !important;
-  border-radius: 22px !important;
+  width: 70px !important;
+  height: 70px !important;
+  background: #f5f5f4 !important;
+  border: 1px solid rgba(197, 168, 128, 0.2) !important;
+  border-radius: 50% !important; /* شكل دائري بسيط */
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin-bottom: 1.5rem !important;
-  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4) !important;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-  position: relative;
-  z-index: 2;
+  margin-bottom: 1.25rem !important;
+  transition: all 0.3s ease !important;
 }
 
 .khdmaty-feature-card:hover .khdmaty-feature-icon {
-  transform: scale(1.15) rotate(8deg) !important;
-  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.6) !important;
+  background: #1c1917 !important;
+  border-color: transparent !important;
+  transform: scale(1.05) !important;
 }
 
 .khdmaty-feature-icon i {
-  color: white !important;
-  font-size: 2.2rem !important;
+  color: #1c1917 !important;
+  font-size: 1.8rem !important;
+  transition: color 0.3s ease !important;
+}
+
+.khdmaty-feature-card:hover .khdmaty-feature-icon i {
+  color: #ffffff !important;
 }
 
 .khdmaty-feature-title {
   font-family: 'Cairo', sans-serif !important;
   font-weight: 800 !important;
-  font-size: 1.2rem !important;
-  color: #ffffff !important;
-  margin-bottom: 0.75rem !important;
-  position: relative;
-  z-index: 2;
+  font-size: 1.1rem !important;
+  color: #1c1917 !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .khdmaty-feature-text {
   font-family: 'Cairo', sans-serif !important;
-  font-size: 0.95rem !important;
-  color: #94a3b8 !important;
-  line-height: 1.8 !important;
-  position: relative;
-  z-index: 2;
+  font-size: 0.9rem !important;
+  color: #57534e !important;
+  line-height: 1.7 !important;
 }
 
 /* ==============================
-   CATEGORIES SLIDER (تصنيفات الخدمات المميزة)
+   CATEGORIES SLIDER (التصنيفات الموضة)
    ============================== */
 .slide--cat-entry {
-  border-radius: 20px !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2) !important;
-  background: rgba(30, 41, 59, 0.4) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-  padding: 1.5rem !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(28, 25, 23, 0.05) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01) !important;
+  background: #ffffff !important;
+  transition: all 0.35s ease !important;
+  padding: 1.25rem !important;
 }
 
 .slide--cat-entry:hover {
-  transform: translateY(-8px) scale(1.02) !important;
-  box-shadow: 0 20px 45px rgba(99, 102, 241, 0.25) !important;
-  border-color: rgba(99, 102, 241, 0.4) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 25px rgba(28, 25, 23, 0.04) !important;
+  border-color: rgba(197, 168, 128, 0.2) !important;
 }
 
 .slide--cat-entry i {
-  background: linear-gradient(135deg, #6366f1, #06b6d4) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  font-size: 2.5rem !important;
-  margin-bottom: 1rem !important;
+  color: #c5a880 !important;
+  font-size: 2.2rem !important;
+  margin-bottom: 0.75rem !important;
   display: block !important;
-  transition: transform 0.4s ease !important;
+  transition: transform 0.3s ease !important;
 }
 
 .slide--cat-entry:hover i {
-  transform: scale(1.2) rotate(-5deg) !important;
+  transform: scale(1.1) !important;
 }
 
 .slide--cat-entry h2 {
   font-family: 'Cairo', sans-serif !important;
   font-weight: 800 !important;
-  font-size: 1.05rem !important;
-  color: #ffffff !important;
+  font-size: 0.98rem !important;
+  color: #1c1917 !important;
 }
 
 /* ==============================
-   TESTIMONIALS OVERHAUL (أراء العملاء الفاخرة)
+   TESTIMONIALS OVERHAUL (أراء المتسوقين)
    ============================== */
 .s-reviews-testimonial {
-  background: rgba(30, 41, 59, 0.35) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(99, 102, 241, 0.1) !important;
-  border-radius: 24px !important;
-  padding: 2.5rem !important;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
-  transition: all 0.4s ease !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(28, 25, 23, 0.05) !important;
+  border-radius: 12px !important;
+  padding: 2.2rem !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.01) !important;
+  transition: all 0.3s ease !important;
 }
 
 .s-reviews-testimonial:hover {
-  transform: translateY(-6px) !important;
-  border-color: rgba(99, 102, 241, 0.35) !important;
-  box-shadow: 0 25px 50px rgba(99, 102, 241, 0.15) !important;
+  transform: translateY(-4px) !important;
+  border-color: rgba(197, 168, 128, 0.2) !important;
 }
 
 .s-reviews-testimonial__avatar img {
   border-radius: 50% !important;
-  border: 3px solid #6366f1 !important;
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4) !important;
+  border: 2px solid #c5a880 !important;
 }
 
 .s-reviews-testimonial__text p {
-  color: #e2e8f0 !important;
-  font-size: 1.05rem !important;
-  line-height: 1.8 !important;
-  font-style: italic;
+  color: #44403c !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
 }
 
 .s-reviews-testimonial__icon svg {
-  fill: rgba(99, 102, 241, 0.25) !important;
+  fill: rgba(197, 168, 128, 0.15) !important;
 }
 
 /* ==============================
-   FOOTER OVERHAUL (تذييل الموقع الفاخر)
+   FOOTER OVERHAUL (تذييل المتجر الكلاسيكي)
    ============================== */
 .store-footer {
-  background: linear-gradient(180deg, #0b0f19 0%, #0f172a 100%) !important;
-  border-top: 1px solid rgba(99, 102, 241, 0.15) !important;
+  background: #f5f5f4 !important; /* لون رمادي دافئ ناعم جداً ومريح */
+  border-top: 1px solid rgba(28, 25, 23, 0.05) !important;
   margin-top: 6rem !important;
   position: relative !important;
 }
@@ -614,19 +533,19 @@ salla-product-card:hover,
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+  height: 3px;
+  background: #c5a880; /* شريط ذهبي رقيق في الأعلى */
 }
 
 .store-footer h3 {
   font-family: 'Cairo', sans-serif !important;
   font-weight: 800 !important;
-  font-size: 1.25rem !important;
-  color: #ffffff !important;
-  margin-bottom: 1.5rem !important;
+  font-size: 1.15rem !important;
+  color: #1c1917 !important;
+  margin-bottom: 1.25rem !important;
   position: relative;
   display: inline-block;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
 
 .store-footer h3::after {
@@ -634,38 +553,37 @@ salla-product-card:hover,
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 40px;
-  height: 3px;
-  background: linear-gradient(90deg, #6366f1 0%, #06b6d4 100%);
-  border-radius: 2px;
+  width: 30px;
+  height: 2px;
+  background: #1c1917;
 }
 
 .store-footer a {
-  color: #94a3b8 !important;
+  color: #57534e !important;
   font-weight: 600 !important;
   transition: all 0.3s ease !important;
 }
 
 .store-footer a:hover {
-  color: #38bdf8 !important;
-  padding-right: 8px !important;
+  color: #c5a880 !important;
+  padding-right: 6px !important;
 }
 
 .store-footer .social-link {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  color: white !important;
-  width: 44px !important;
-  height: 44px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(28, 25, 23, 0.1) !important;
+  color: #1c1917 !important;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50% !important;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  transition: all 0.3s ease !important;
 }
 
 .store-footer .social-link:hover {
-  background: linear-gradient(135deg, #6366f1, #06b6d4) !important;
+  background: #1c1917 !important;
+  color: #ffffff !important;
   border-color: transparent !important;
-  transform: translateY(-4px) scale(1.1) !important;
-  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4) !important;
+  transform: translateY(-3px) !important;
 }
 
 /* ==============================
@@ -678,22 +596,21 @@ input[type="password"],
 input[type="number"],
 select,
 textarea {
-  background: rgba(15, 23, 42, 0.6) !important;
-  color: white !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 12px !important;
+  background: #ffffff !important;
+  color: #1c1917 !important;
+  border: 1px solid rgba(28, 25, 23, 0.15) !important;
+  border-radius: 8px !important;
   font-family: 'Cairo', sans-serif !important;
   font-weight: 600 !important;
   transition: all 0.3s ease !important;
-  padding: 12px 16px !important;
+  padding: 10px 14px !important;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #6366f1 !important;
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.25) !important;
-  background: rgba(15, 23, 42, 0.8) !important;
+  border-color: #1c1917 !important;
+  box-shadow: 0 0 8px rgba(28, 25, 23, 0.1) !important;
 }
 
 /* ==============================
@@ -701,18 +618,18 @@ textarea:focus {
    ============================== */
 #mobile-menu,
 .mm-menu {
-  background: linear-gradient(180deg, #0b0f19, #0f172a) !important;
-  border-left: 1px solid rgba(99, 102, 241, 0.15) !important;
+  background: #ffffff !important;
+  border-left: 1px solid rgba(28, 25, 23, 0.08) !important;
 }
 
 .mm-menu a {
-  color: #cbd5e1 !important;
+  color: #44403c !important;
   font-family: 'Cairo', sans-serif !important;
   font-weight: 700 !important;
 }
 
 .mm-menu a:hover {
-  color: #38bdf8 !important;
+  color: #c5a880 !important;
 }
 
 /* ==============================
@@ -720,11 +637,11 @@ textarea:focus {
    ============================== */
 @media (max-width: 768px) {
   .s-block--hero-slider .swiper-slide {
-    min-height: 480px !important;
+    min-height: 440px !important;
   }
   
   .slider-content-card {
-    padding: 2rem !important;
+    padding: 1.75rem !important;
     margin: 10px !important;
     text-align: center !important;
   }
@@ -734,10 +651,6 @@ textarea:focus {
   }
   
   .khdmaty-feature-card {
-    padding: 1.75rem 1.25rem !important;
-  }
-  
-  .s-block__title h2 {
-    font-size: 1.5rem !important;
+    padding: 1.5rem 1rem !important;
   }
 }
