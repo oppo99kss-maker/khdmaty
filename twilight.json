@@ -194,7 +194,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true
+            "selected": true,
+            "public": true
         },
         {
             "id": "slider_background_size",
@@ -224,7 +225,8 @@
                 }
             ],
             "source": "Manual",
-            "required": true
+            "required": true,
+            "multichoice": true
         },
         {
             "type": "boolean",
@@ -235,7 +237,7 @@
             "format": "switch",
             "required": false,
             "value": false,
-            "selected": false
+            "selected": true
         }
     ],
     "components": [
