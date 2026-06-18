@@ -1,7 +1,7 @@
 /*
  * ================================================================
- *  خدماتي - Khdmaty Luxury Fashion & Clothing Theme Customizations
- *  تصميم ناصع، راقٍ وبسيط لعلامة تجارية متخصصة في الملابس والأزياء
+ *  خدماتي - Khdmaty Ultra-Luxury Fashion & Apparel Theme Customizations
+ *  تصميم استثنائي راقٍ، بلمسات ذهبية عصرية وحركات تفاعلية دقيقة للموضة والأزياء
  * ================================================================
  */
 
@@ -12,337 +12,418 @@
 
 body {
   font-family: 'Cairo', sans-serif !important;
-  background-color: #fafaf9 !important; /* خلفية بيضاء دافئة وناعمة مناسبة لعرض الأزياء */
-  color: #1c1917 !important; /* نصوص بلون كربوني داكن وأنيق */
+  background-color: #faf9f6 !important; /* لون العاج الدافئ الفاخر */
+  color: #1c1917 !important;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* شريط التمرير بلون كربوني وذهبي فاخر */
+/* شريط تمرير فاخر ضيق بلون كربوني وذهبي */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f5f5f4;
+  background: #faf9f6;
 }
 ::-webkit-scrollbar-thumb {
   background: #1c1917;
-  border-radius: 4px;
+  border: 1px solid #c5a880;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #c5a880;
 }
 
-/* تخصيص التحديد بلون ذهبي هادئ */
+/* تحديد نصوص فاخر باللون الذهبي الباهت */
 ::selection {
-  background: rgba(197, 168, 128, 0.25);
+  background: rgba(197, 168, 128, 0.3);
   color: #1c1917;
+}
+
+/* ==============================
+   FASHION AMBIENT GLOWS (هالات الإضاءة الناعمة للموضة)
+   ============================== */
+.fashion-ambient-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197, 168, 128, 0.1) 0%, rgba(250, 249, 246, 0) 70%);
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+  animation: fashion-float-glow 15s ease-in-out infinite alternate;
+}
+
+@keyframes fashion-float-glow {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(50px, 80px) scale(1.15);
+    opacity: 1;
+  }
 }
 
 /* ==============================
    TOP NAVBAR (شريط الإعلانات العلوي)
    ============================= */
 .top-navbar {
-  background: #1c1917 !important; /* كربوني داكن كلاسيكي للمظهر الفاخر */
+  background: #1c1917 !important;
   color: #ffffff !important;
   font-size: 0.8rem !important;
-  letter-spacing: 0.5px;
-  padding: 8px 0 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.8px;
+  padding: 10px 0 !important;
+  border-bottom: 1px solid rgba(197, 168, 128, 0.15) !important; /* فاصل ذهبي رفيع */
   position: relative;
   z-index: 50;
 }
 
-.top-navbar a, 
-.top-navbar span, 
-.topnav-link-item {
+.top-navbar a {
   color: rgba(255, 255, 255, 0.9) !important;
-  font-weight: 600 !important;
   transition: color 0.3s ease !important;
 }
 
 .top-navbar a:hover {
-  color: #c5a880 !important; /* لمسة ذهبية للملابس الراقية */
+  color: #c5a880 !important;
 }
 
 /* ==============================
-   MAIN NAVBAR (شريط التنقل الرئيسي الفاخر)
+   MAIN NAVBAR & MICRO-INTERACTIONS (شريط التنقل التفاعلي)
    ============================== */
 .main-nav-container {
-  background: rgba(255, 255, 255, 0.85) !important; /* زجاجي شفاف أبيض ناصع */
+  background: rgba(255, 255, 255, 0.85) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
-  border-bottom: 1px solid rgba(28, 25, 23, 0.05) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02) !important;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  padding: 14px 0 !important;
+  border-bottom: 1px solid rgba(197, 168, 128, 0.1) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01) !important;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  padding: 16px 0 !important;
 }
 
 .main-nav-container.fixed-pinned .inner,
 .main-nav-container.fixed-header .inner {
   background: rgba(255, 255, 255, 0.95) !important;
-  border-bottom: 1px solid rgba(28, 25, 23, 0.08) !important;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05) !important;
+  border-bottom: 1px solid rgba(197, 168, 128, 0.2) !important;
 }
 
-/* اسم المتجر وشعاره بشكل كلاسيكي أنيق */
+/* اسم المتجر */
 .navbar-brand h1, 
 .navbar-brand h4 {
   color: #1c1917 !important;
   font-weight: 800 !important;
-  font-size: 1.5rem !important;
+  font-size: 1.6rem !important;
   letter-spacing: -0.5px;
+  position: relative;
 }
 
-/* أزرار القائمة الرئيسية للملابس */
+/* حركة التمرير على الروابط: خط منزلق ذهبي */
 .main-menu > li > a {
   font-weight: 700 !important;
   font-size: 0.92rem !important;
   color: #44403c !important;
-  border-radius: 6px !important;
   padding: 8px 16px !important;
-  transition: all 0.3s ease !important;
   position: relative !important;
+  transition: color 0.3s ease !important;
 }
 
-.main-menu > li > a:hover,
-.main-menu > li.is-active > a {
+.main-menu > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #c5a880;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.main-menu > li > a:hover {
   color: #1c1917 !important;
-  background: rgba(197, 168, 128, 0.1) !important;
 }
 
-/* زر السلة والأيقونات العلوية */
+.main-menu > li > a:hover::after,
+.main-menu > li.is-active > a::after {
+  width: 60%;
+  left: 20%;
+}
+
+/* زر السلة التفاعلي: يقفز بلطف عند التمرير */
 .header-btn__icon {
-  background: #1c1917 !important; /* كلاسيكي أسود */
+  background: #1c1917 !important;
   color: #ffffff !important;
-  border: none !important;
-  box-shadow: 0 4px 15px rgba(28, 25, 23, 0.15) !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 1px solid rgba(197, 168, 128, 0.2) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   border-radius: 50% !important;
-  width: 42px !important;
-  height: 42px !important;
+  width: 44px !important;
+  height: 44px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
 }
 
-.header-btn__icon:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 20px rgba(197, 168, 128, 0.4) !important;
-  background: #c5a880 !important; /* تلميح ذهبي رملي عند التمرير */
-}
-
-/* مربع البحث */
-.s-search-input {
-  border-radius: 8px !important;
-  border: 1px solid rgba(28, 25, 23, 0.15) !important;
-  background: #ffffff !important;
+.salla-cart-summary:hover .header-btn__icon {
+  animation: cart-hop 0.6s ease-in-out infinite alternate !important;
+  background: #c5a880 !important;
   color: #1c1917 !important;
-  font-family: 'Cairo', sans-serif !important;
-  font-weight: 600 !important;
-  transition: all 0.3s ease !important;
+  border-color: transparent !important;
 }
 
-.s-search-input:focus {
+@keyframes cart-hop {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+
+/* حلقة ذهبية مضيئة لأيقونة المستخدم */
+salla-user-menu:hover, .header-btn:hover .header-btn__icon {
   border-color: #c5a880 !important;
-  box-shadow: 0 0 10px rgba(197, 168, 128, 0.15) !important;
+  box-shadow: 0 0 12px rgba(197, 168, 128, 0.4) !important;
 }
 
 /* ==============================
-   HERO SLIDER OVERHAUL (لوحة عرض أزياء مميزة)
+   HERO SLIDER OVERHAUL (لوحة الموضة والأزياء التفاعلية)
    ============================== */
 .s-block--hero-slider {
-  margin-bottom: 3rem !important;
-  border-radius: 16px !important;
+  margin-bottom: 3.5rem !important;
+  border-radius: 12px !important;
   overflow: hidden !important;
-  border: 1px solid rgba(28, 25, 23, 0.05) !important;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(197, 168, 128, 0.15) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02) !important;
 }
 
 .s-block--hero-slider .swiper-slide {
-  min-height: 580px !important;
+  min-height: 620px !important;
   display: flex !important;
   align-items: center !important;
-  position: relative !important;
 }
 
-/* تعتيم خفيف وناعم أبيض بدلاً من الأسود للسلايدر */
 .s-block--hero-slider .swiper-slide::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(250, 250, 249, 0.9) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(250, 250, 249, 0.2) 100%) !important;
+  background: linear-gradient(90deg, rgba(250, 249, 246, 0.95) 0%, rgba(255, 255, 255, 0.4) 60%, rgba(250, 249, 246, 0.1) 100%) !important;
   z-index: 2;
 }
 
-.home-slider__content {
+/* بطاقة المحتوى زجاجية فريدة المظهر محاطة ببرواز ذهبي رفيع */
+.slider-content-card {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1.5px solid rgba(197, 168, 128, 0.35) !important;
+  padding: 3.5rem !important;
+  border-radius: 8px !important;
+  box-shadow: 0 20px 45px rgba(197, 168, 128, 0.08) !important;
+  max-width: 620px !important;
   position: relative;
-  z-index: 10 !important;
-  text-align: right !important;
 }
 
-/* بطاقة عرض الأزياء الكلاسيكية الناعمة */
-.slider-content-card {
-  background: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  border: 1px solid rgba(197, 168, 128, 0.2) !important;
-  padding: 3rem !important;
-  border-radius: 12px !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03) !important;
-  max-width: 600px !important;
+/* لمعة زاوية ذهبية جمالية في الكرت */
+.slider-content-card::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid #c5a880;
+  border-right: 2px solid #c5a880;
+}
+
+.slider-content-card::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #c5a880;
+  border-left: 2px solid #c5a880;
 }
 
 .home-slider__content h2 {
   font-family: 'Cairo', sans-serif !important;
   font-weight: 800 !important;
-  font-size: clamp(2rem, 4.5vw, 3.2rem) !important;
+  font-size: clamp(2rem, 5vw, 3.4rem) !important;
   line-height: 1.3 !important;
   color: #1c1917 !important;
-  margin-bottom: 1.25rem !important;
+  margin-bottom: 1.5rem !important;
+  letter-spacing: -0.5px;
 }
 
 .home-slider__content .description {
   font-size: 1.15rem !important;
   color: #57534e !important;
   font-weight: 500 !important;
-  line-height: 1.7 !important;
-  margin-bottom: 2rem !important;
+  line-height: 1.8 !important;
+  margin-bottom: 2.5rem !important;
 }
 
-/* أسهم السلايدر للموضة */
+/* أزرار السلايدر */
 .swiper-button-next,
 .swiper-button-prev {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 1px solid rgba(28, 25, 23, 0.1) !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 168, 128, 0.3) !important;
   border-radius: 50% !important;
-  width: 48px !important;
-  height: 48px !important;
-  transition: all 0.3s ease !important;
+  width: 52px !important;
+  height: 52px !important;
   color: #1c1917 !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   background: #1c1917 !important;
   color: #ffffff !important;
-  transform: scale(1.05) !important;
-}
-
-.swiper-pagination-bullet {
-  background: rgba(28, 25, 23, 0.2) !important;
-  width: 8px !important;
-  height: 8px !important;
-  transition: all 0.3s ease !important;
-}
-
-.swiper-pagination-bullet-active {
-  background: #1c1917 !important;
-  width: 24px !important;
-  border-radius: 4px !important;
+  border-color: transparent !important;
+  transform: scale(1.1) !important;
 }
 
 /* ==============================
-   PRODUCT CARDS OVERHAUL (كرت منتجات الملابس الفاخرة)
+   PRODUCT CARDS OVERHAUL (بطاقات المنتجات برواز ذهبي تفاعلي)
    ============================== */
 .s-product-card,
 salla-product-card,
 .product-card {
-  background: #ffffff !important; /* كروت بيضاء نقية */
-  border-radius: 12px !important;
+  background: #ffffff !important;
+  border-radius: 8px !important;
   overflow: hidden !important;
-  border: 1px solid rgba(28, 25, 23, 0.05) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
-  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-  padding: 10px !important;
+  padding: 12px !important;
+  border: 1px solid rgba(197, 168, 128, 0.1) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015) !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  position: relative;
+}
+
+/* برواز ذهبي يتسع ويظهر بنعومة عند التمرير */
+.s-product-card::before,
+salla-product-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1.5px solid #c5a880;
+  opacity: 0;
+  border-radius: 6px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.s-product-card:hover::before,
+salla-product-card:hover::before {
+  opacity: 1;
+  inset: 0px; /* يتسع ليصبح محيطاً بكامل الكرت */
 }
 
 .s-product-card:hover,
 salla-product-card:hover,
 .product-card:hover {
-  transform: translateY(-6px) !important;
-  border-color: rgba(197, 168, 128, 0.25) !important;
-  box-shadow: 0 16px 35px rgba(28, 25, 23, 0.06) !important;
+  transform: translateY(-8px) !important;
+  box-shadow: 0 16px 35px rgba(197, 168, 128, 0.12) !important;
 }
 
-/* صورة ملابس ناعمة مع تقريب لطيف */
+/* صور الملابس الراقية مع فلتر دافئ طفيف عند التقريب */
 .s-product-card__image-wrapper, 
 .product-card img {
-  border-radius: 8px !important;
+  border-radius: 4px !important;
   overflow: hidden;
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
 .s-product-card:hover .s-product-card__image-wrapper,
 .product-card:hover img {
   transform: scale(1.04) !important;
+  filter: sepia(10%) !important; /* لمسة تدرج لوني دافئ للملابس */
 }
 
-/* عنوان قطعة الملابس */
+/* أسماء المنتجات */
 .s-product-card__title,
 .s-product-card h3 {
   font-family: 'Cairo', sans-serif !important;
   font-weight: 700 !important;
   color: #1c1917 !important;
-  font-size: 0.98rem !important;
-  margin-top: 12px !important;
+  font-size: 1rem !important;
+  margin-top: 15px !important;
   letter-spacing: -0.2px;
 }
 
-/* سعر كلاسيكي */
-.s-price,
 .s-product-card .s-price {
   color: #1c1917 !important;
   font-weight: 800 !important;
-  font-size: 1.15rem !important;
+  font-size: 1.2rem !important;
 }
 
-/* زر "إضافة للسلة" ناعم وبلون كربوني */
+/* أزرار سلة مع تأثير اللمعان (Shimmer Effect) */
 .s-product-card .btn,
 .btn--add-to-cart,
 .s-product-card__add-to-cart {
-  background: #1c1917 !important; /* أسود صلب أنيق */
+  background: #1c1917 !important;
   color: #ffffff !important;
   border: none !important;
-  border-radius: 6px !important;
+  border-radius: 4px !important;
   font-family: 'Cairo', sans-serif !important;
-  font-weight: 700 !important;
-  padding: 10px 18px !important;
+  font-weight: 800 !important;
+  padding: 12px 20px !important;
   width: 100% !important;
+  position: relative;
+  overflow: hidden;
   transition: all 0.3s ease !important;
   text-align: center !important;
   box-shadow: none !important;
 }
 
-.s-product-card .btn:hover,
-.btn--add-to-cart:hover {
-  background: #c5a880 !important; /* يتحول إلى لون ذهبي ناعم */
-  color: #1c1917 !important;
-  transform: translateY(-1px) !important;
+/* ومضة ضوئية ذهبية تجتاح الزر عند التمرير */
+.s-product-card .btn::after,
+.btn--add-to-cart::after,
+.s-product-card__add-to-cart::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(197, 168, 128, 0.4), transparent);
+  transform: skewX(-20deg);
+  transition: none;
 }
 
-/* شارات الخصومات بلون كرزي فاخر */
+.s-product-card:hover .btn::after,
+.s-product-card:hover .btn--add-to-cart::after,
+.s-product-card:hover .s-product-card__add-to-cart::after {
+  left: 150%;
+  transition: all 0.8s ease-in-out;
+}
+
+.s-product-card .btn:hover,
+.btn--add-to-cart:hover {
+  background: #c5a880 !important;
+  color: #1c1917 !important;
+}
+
+/* الشارات بلون كرزي داكن هادئ */
 .s-badge,
 .sale-tag,
 [class*="badge"] {
-  background: #be123c !important; /* كرزي غامق راقٍ للموضة */
+  background: #be123c !important;
   color: #ffffff !important;
   font-family: 'Cairo', sans-serif !important;
   font-weight: 800 !important;
-  border-radius: 4px !important;
-  padding: 3px 10px !important;
-  box-shadow: none !important;
+  border-radius: 2px !important;
+  padding: 4px 12px !important;
+  letter-spacing: 0.5px;
 }
 
-/* زر المفضلة */
+/* زر المفضلة الدائري الكلاسيكي */
 .s-wishlist-btn,
 [class*="wishlist"] button {
   background: #ffffff !important;
-  border: 1px solid rgba(28, 25, 23, 0.1) !important;
+  border: 1px solid rgba(197, 168, 128, 0.3) !important;
   color: #1c1917 !important;
-  width: 38px !important;
-  height: 38px !important;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50% !important;
   transition: all 0.3s ease !important;
 }
@@ -353,17 +434,23 @@ salla-product-card:hover,
   border-color: transparent !important;
 }
 
+/* نجوم تقييم ذهبية فخمة */
+.s-rating-stars {
+  color: #c5a880 !important;
+}
+
 /* ==============================
-   SECTION TITLE UPGRADE (عناوين الأقسام الراقية)
+   SECTION TITLE UPGRADE (عناوين أقسام دار الأزياء)
    ============================== */
 .s-block__title h2 {
   font-family: 'Cairo', sans-serif !important;
   font-weight: 800 !important;
-  font-size: 1.6rem !important;
+  font-size: 1.7rem !important;
   color: #1c1917 !important;
   position: relative !important;
   display: inline-block;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
+  letter-spacing: -0.3px;
 }
 
 .s-block__title h2::after {
@@ -371,9 +458,9 @@ salla-product-card:hover,
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 40px;
+  width: 48px;
   height: 3px;
-  background: #c5a880; /* خط ذهبي هادئ */
+  background: linear-gradient(90deg, #1c1917 0%, #c5a880 100%);
   border-radius: 1px;
 }
 
@@ -383,44 +470,40 @@ salla-product-card:hover,
 }
 
 /* ==============================
-   STORE FEATURES OVERHAUL (مزايا متجر الملابس)
+   STORE FEATURES OVERHAUL (المزايا)
    ============================== */
 .khdmaty-feature-card {
   background: #ffffff !important;
-  border: 1px solid rgba(28, 25, 23, 0.05) !important;
-  border-radius: 12px !important;
-  padding: 2.2rem 1.5rem !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  text-align: center !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+  border: 1px solid rgba(197, 168, 128, 0.15) !important;
+  border-radius: 8px !important;
+  padding: 2.5rem 1.75rem !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.01) !important;
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
 .khdmaty-feature-card:hover {
   transform: translateY(-6px) !important;
-  border-color: rgba(197, 168, 128, 0.2) !important;
-  box-shadow: 0 15px 30px rgba(28, 25, 23, 0.04) !important;
+  border-color: #c5a880 !important;
+  box-shadow: 0 15px 35px rgba(197, 168, 128, 0.08) !important;
 }
 
 .khdmaty-feature-icon {
-  width: 70px !important;
-  height: 70px !important;
-  background: #f5f5f4 !important;
-  border: 1px solid rgba(197, 168, 128, 0.2) !important;
-  border-radius: 50% !important; /* شكل دائري بسيط */
+  width: 72px !important;
+  height: 72px !important;
+  background: #faf9f6 !important;
+  border: 1.5px solid rgba(197, 168, 128, 0.4) !important;
+  border-radius: 50% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin-bottom: 1.25rem !important;
-  transition: all 0.3s ease !important;
+  margin-bottom: 1.5rem !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
 .khdmaty-feature-card:hover .khdmaty-feature-icon {
   background: #1c1917 !important;
-  border-color: transparent !important;
-  transform: scale(1.05) !important;
+  border-color: transparent;
+  transform: rotate(360deg) scale(1.05) !important;
 }
 
 .khdmaty-feature-icon i {
@@ -436,70 +519,61 @@ salla-product-card:hover,
 .khdmaty-feature-title {
   font-family: 'Cairo', sans-serif !important;
   font-weight: 800 !important;
-  font-size: 1.1rem !important;
+  font-size: 1.15rem !important;
   color: #1c1917 !important;
-  margin-bottom: 0.5rem !important;
 }
 
 .khdmaty-feature-text {
   font-family: 'Cairo', sans-serif !important;
-  font-size: 0.9rem !important;
+  font-size: 0.92rem !important;
   color: #57534e !important;
-  line-height: 1.7 !important;
 }
 
 /* ==============================
-   CATEGORIES SLIDER (التصنيفات الموضة)
+   CATEGORIES SLIDER (تصنيفات الأزياء)
    ============================== */
 .slide--cat-entry {
-  border-radius: 12px !important;
-  border: 1px solid rgba(28, 25, 23, 0.05) !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01) !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(197, 168, 128, 0.15) !important;
   background: #ffffff !important;
   transition: all 0.35s ease !important;
-  padding: 1.25rem !important;
+  padding: 1.5rem !important;
 }
 
 .slide--cat-entry:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 12px 25px rgba(28, 25, 23, 0.04) !important;
-  border-color: rgba(197, 168, 128, 0.2) !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 12px 30px rgba(197, 168, 128, 0.08) !important;
+  border-color: #c5a880 !important;
 }
 
 .slide--cat-entry i {
   color: #c5a880 !important;
-  font-size: 2.2rem !important;
-  margin-bottom: 0.75rem !important;
-  display: block !important;
-  transition: transform 0.3s ease !important;
-}
-
-.slide--cat-entry:hover i {
-  transform: scale(1.1) !important;
+  font-size: 2.4rem !important;
+  margin-bottom: 0.8rem !important;
 }
 
 .slide--cat-entry h2 {
   font-family: 'Cairo', sans-serif !important;
   font-weight: 800 !important;
-  font-size: 0.98rem !important;
+  font-size: 1.05rem !important;
   color: #1c1917 !important;
 }
 
 /* ==============================
-   TESTIMONIALS OVERHAUL (أراء المتسوقين)
+   TESTIMONIALS OVERHAUL (تقييمات العملاء)
    ============================== */
 .s-reviews-testimonial {
   background: #ffffff !important;
-  border: 1px solid rgba(28, 25, 23, 0.05) !important;
-  border-radius: 12px !important;
-  padding: 2.2rem !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.01) !important;
+  border: 1.5px solid rgba(197, 168, 128, 0.15) !important;
+  border-radius: 8px !important;
+  padding: 2.5rem !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01) !important;
   transition: all 0.3s ease !important;
 }
 
 .s-reviews-testimonial:hover {
   transform: translateY(-4px) !important;
-  border-color: rgba(197, 168, 128, 0.2) !important;
+  border-color: #c5a880 !important;
 }
 
 .s-reviews-testimonial__avatar img {
@@ -509,20 +583,19 @@ salla-product-card:hover,
 
 .s-reviews-testimonial__text p {
   color: #44403c !important;
-  font-size: 1rem !important;
-  line-height: 1.7 !important;
+  font-size: 1.05rem !important;
 }
 
 .s-reviews-testimonial__icon svg {
-  fill: rgba(197, 168, 128, 0.15) !important;
+  fill: rgba(197, 168, 128, 0.2) !important;
 }
 
 /* ==============================
-   FOOTER OVERHAUL (تذييل المتجر الكلاسيكي)
+   FOOTER OVERHAUL (تذييل المتجر الفاخر)
    ============================== */
 .store-footer {
-  background: #f5f5f4 !important; /* لون رمادي دافئ ناعم جداً ومريح */
-  border-top: 1px solid rgba(28, 25, 23, 0.05) !important;
+  background: #f5f5f4 !important;
+  border-top: 1px solid rgba(197, 168, 128, 0.2) !important;
   margin-top: 6rem !important;
   position: relative !important;
 }
@@ -533,19 +606,19 @@ salla-product-card:hover,
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: #c5a880; /* شريط ذهبي رقيق في الأعلى */
+  height: 4px;
+  background: linear-gradient(90deg, #1c1917 0%, #c5a880 50%, #1c1917 100%);
 }
 
 .store-footer h3 {
   font-family: 'Cairo', sans-serif !important;
   font-weight: 800 !important;
-  font-size: 1.15rem !important;
+  font-size: 1.2rem !important;
   color: #1c1917 !important;
-  margin-bottom: 1.25rem !important;
+  margin-bottom: 1.5rem !important;
   position: relative;
   display: inline-block;
-  padding-bottom: 6px;
+  padding-bottom: 8px;
 }
 
 .store-footer h3::after {
@@ -553,9 +626,9 @@ salla-product-card:hover,
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 30px;
+  width: 35px;
   height: 2px;
-  background: #1c1917;
+  background: #c5a880;
 }
 
 .store-footer a {
@@ -566,24 +639,24 @@ salla-product-card:hover,
 
 .store-footer a:hover {
   color: #c5a880 !important;
-  padding-right: 6px !important;
+  padding-right: 8px !important;
 }
 
 .store-footer .social-link {
   background: #ffffff !important;
-  border: 1px solid rgba(28, 25, 23, 0.1) !important;
+  border: 1px solid rgba(197, 168, 128, 0.25) !important;
   color: #1c1917 !important;
-  width: 40px !important;
-  height: 40px !important;
+  width: 44px !important;
+  height: 44px !important;
   border-radius: 50% !important;
-  transition: all 0.3s ease !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
 .store-footer .social-link:hover {
   background: #1c1917 !important;
   color: #ffffff !important;
   border-color: transparent !important;
-  transform: translateY(-3px) !important;
+  transform: translateY(-4px) rotate(360deg) !important;
 }
 
 /* ==============================
@@ -598,19 +671,18 @@ select,
 textarea {
   background: #ffffff !important;
   color: #1c1917 !important;
-  border: 1px solid rgba(28, 25, 23, 0.15) !important;
-  border-radius: 8px !important;
+  border: 1.5px solid rgba(197, 168, 128, 0.2) !important;
+  border-radius: 6px !important;
   font-family: 'Cairo', sans-serif !important;
   font-weight: 600 !important;
   transition: all 0.3s ease !important;
-  padding: 10px 14px !important;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
   border-color: #1c1917 !important;
-  box-shadow: 0 0 8px rgba(28, 25, 23, 0.1) !important;
+  box-shadow: 0 0 10px rgba(197, 168, 128, 0.15) !important;
 }
 
 /* ==============================
@@ -619,7 +691,7 @@ textarea:focus {
 #mobile-menu,
 .mm-menu {
   background: #ffffff !important;
-  border-left: 1px solid rgba(28, 25, 23, 0.08) !important;
+  border-left: 1px solid rgba(197, 168, 128, 0.15) !important;
 }
 
 .mm-menu a {
@@ -637,11 +709,11 @@ textarea:focus {
    ============================== */
 @media (max-width: 768px) {
   .s-block--hero-slider .swiper-slide {
-    min-height: 440px !important;
+    min-height: 480px !important;
   }
   
   .slider-content-card {
-    padding: 1.75rem !important;
+    padding: 2rem !important;
     margin: 10px !important;
     text-align: center !important;
   }
@@ -651,6 +723,6 @@ textarea:focus {
   }
   
   .khdmaty-feature-card {
-    padding: 1.5rem 1rem !important;
+    padding: 1.75rem 1.25rem !important;
   }
 }
